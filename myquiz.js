@@ -1,3 +1,22 @@
+//لعرض مقدمه وخفائها 
+function revealQuiz() {
+    // 1. إخفاء واجهة النص التمهيدي بالكامل مع تأثير اختفاء بسيط
+    const intro = document.getElementById('intro-container');
+    intro.style.transition = "opacity 0.5s ease";
+    intro.style.opacity = "0";
+    
+    setTimeout(() => {
+        intro.style.display = 'none';
+        
+        // 2. إظهار حاوية الامتحان (id="all")
+        const quizMain = document.getElementById('all');
+        quizMain.style.display = 'flex'; // نعيده كـ flex كما في التنسيق الأصلي
+        
+        // 3. التأكد من استدعاء وظيفة فحص أعلى نتيجة
+        if(typeof checkHighScore === "function") checkHighScore();
+        
+    }, 500);
+}
 
         
         // الأسئلة بتنسيق JSON (سهل التعديل)
