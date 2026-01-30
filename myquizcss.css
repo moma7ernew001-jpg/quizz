@@ -4,7 +4,7 @@
     --primary: #6c2dea; --success: #00c853; --danger: #ff1744; --warning: #ff9100;
     --bg: #f4f7ff; --card-bg: #ffffff; --text-color: #2d3436;
     --info-bg: #f8f9fa; --border-color: #f0f0f0; --mode-btn-bg: #eeeeee;
-    background: var(--bg); min-height: 100vh; display: flex; flex-direction: column; 
+    background: var(--bg); min-height: 100vh; display: none !important; flex-direction: column; 
     align-items: center; justify-content: center; font-family: 'Cairo', sans-serif !important; 
     direction: rtl; box-sizing: border-box;
 }
