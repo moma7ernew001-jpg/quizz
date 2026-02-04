@@ -193,8 +193,8 @@ function revealQuiz() {
 
 // 1. متغيرات الروابط (عدلها من هنا)
 const socialLinks = {
-    facebook: "https://facebook.com/yourpage",
-    telegram: "https://t.me/yourchannel"
+    facebook: "https://www.facebook.com/profile.php?id=61560715138254",
+    telegram: "https://t.me/Alekhtebar2026"
 };
 
 // تطبيق الروابط تلقائياً
