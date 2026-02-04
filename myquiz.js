@@ -190,3 +190,35 @@ function revealQuiz() {
         function copyLink() {
             navigator.clipboard.writeText(window.location.href).then(() => alert("تم نسخ الرابط!"));
         };
+
+// 1. متغيرات الروابط (عدلها من هنا)
+const socialLinks = {
+    facebook: "https://facebook.com/yourpage",
+    telegram: "https://t.me/yourchannel"
+};
+
+// تطبيق الروابط تلقائياً
+document.addEventListener("DOMContentLoaded", () => {
+    const fb = document.getElementById('footer-fb-link');
+    const tg = document.getElementById('footer-tg-link');
+    if(fb) fb.href = socialLinks.facebook;
+    if(tg) tg.href = socialLinks.telegram;
+});
+
+function revealQuizNow() {
+    const introBox = document.getElementById('quiz-intro-box');
+    const quizContainer = document.getElementById('all');
+    
+    introBox.style.transition = '0.5s';
+    introBox.style.opacity = '0';
+    
+    setTimeout(() => {
+        introBox.style.display = 'none';
+        quizContainer.style.display = 'flex'; // تأكد أن التنسيق flex للتمركز
+        quizContainer.style.opacity = '0';
+        setTimeout(() => { quizContainer.style.opacity = '1'; }, 50);
+        
+        // التمرير للمنتصف
+        quizContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 500);
+}
